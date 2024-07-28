@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Data, portfoliosData } from "../../tools/data";
 function MyProjects() {
   return (
@@ -21,7 +22,7 @@ function MyProjects() {
 }
 const Freelancing = () => {
   return (
-    <div>
+    <div className=" pb-[100px]">
       <p>
         Here, you can choose any template as an example for your project. If you
         have any other idea or design, we can work on it together. You can also
@@ -46,6 +47,11 @@ const Others = () => {
         animations using Next.js, TailwindCSS with TypeScript, and animation
         libraries like Framer Motion and GSAP.
       </p>
+      <div className=" mt-5 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-4 justify-items-center">
+        {portfoliosData.map((portfolio) => (
+          <Card key={portfolio.id} {...portfolio} />
+        ))}
+      </div>
     </div>
   );
 };
@@ -53,7 +59,9 @@ const Card = ({ title, url, tools, image }: Data) => {
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800">
       <div className="">
-        <img src={image} alt={title} className="rounded-xl" />
+        <Suspense fallback={<Loading />}>
+          <img src={image} alt={title} className="rounded-xl" />
+        </Suspense>
       </div>
       <div className="p-2">
         <h2 className=" font-bold">{title}</h2>
@@ -73,5 +81,7 @@ const Card = ({ title, url, tools, image }: Data) => {
     </div>
   );
 };
-
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
+}
 export default MyProjects;

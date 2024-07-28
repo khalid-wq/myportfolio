@@ -11,8 +11,8 @@ import Footer from "../componenets/Footer";
 function Home() {
   const { isModalOpen, modalContent } = useModal();
   isModalOpen
-    ? document.body.classList.add("active-modal")
-    : document.body.classList.remove("active-modal");
+    ? document.body.classList.add("no-scroll")
+    : document.body.classList.remove("no-scroll");
   return (
     <div className=" flex flex-col justify-between">
       <div className=" p-2 grid lg:grid-cols-[1fr,300px] gap-3 max-w-7xl mx-auto  py-[4rem]">
