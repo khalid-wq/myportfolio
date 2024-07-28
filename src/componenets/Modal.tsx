@@ -12,8 +12,7 @@ function Modal({ children }: { children: React.ReactNode }) {
       ></div>
       <motion.div
         drag="y"
-        dragPropagation={false}
-        onDragEnd={closeModal}
+        dragSnapToOrigin
         animate={{ scaleY: 1 }}
         initial={{ scaleY: 0 }}
         exit={{ scaleY: 0 }}
