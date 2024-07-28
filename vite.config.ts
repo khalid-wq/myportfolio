@@ -4,6 +4,6 @@ import tailwindcss from "tailwindcss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
   base: "/myportfolio/",
+  plugins: [react(), tailwindcss()],
 });

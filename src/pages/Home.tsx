@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Aboutme from "../componenets/Aboutme";
 import BottomGrid from "../componenets/BottomGrid";
 import Modal from "../componenets/Modal";
@@ -6,28 +5,32 @@ import MoreAboutMe from "../componenets/MoreAboutMe";
 import Projects from "../componenets/Projects";
 import RightBar from "../componenets/RightBar";
 import { AnimatePresence } from "framer-motion";
+import { useModal } from "../hooks/useModal";
+import Footer from "../componenets/Footer";
 
 function Home() {
-  const [openModal, setOpenModal] = useState<boolean>(false);
-
+  const { isModalOpen, modalContent } = useModal();
   return (
-    <div className=" p-2 grid lg:grid-cols-[1fr,300px] gap-3 max-w-7xl mx-auto  py-[4rem]">
-      <AnimatePresence>
-        {openModal && <Modal setOpenModal={setOpenModal} />}
-      </AnimatePresence>
+    <div className=" flex flex-col justify-between">
+      <div className=" p-2 grid lg:grid-cols-[1fr,300px] gap-3 max-w-7xl mx-auto  py-[4rem]">
+        <AnimatePresence>
+          {isModalOpen && <Modal>{modalContent}</Modal>}
+        </AnimatePresence>
 
-      <div className=" grid grid-cols-1 gap-3">
-        <Aboutme />
-        <div className=" grid md:grid-cols-2 grid-cols-1 gap-3 ">
-          <MoreAboutMe openModal={openModal} setOpenModal={setOpenModal} />
-          <Projects />
+        <div className=" grid grid-cols-1 gap-3">
+          <Aboutme />
+          <div className=" grid md:grid-cols-2 grid-cols-1 gap-3 ">
+            <MoreAboutMe />
+            <Projects />
+          </div>
+          <BottomGrid />
         </div>
-        <BottomGrid />
-      </div>
 
-      <div>
-        <RightBar setOpenModal={setOpenModal} />
+        <div>
+          <RightBar />
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }

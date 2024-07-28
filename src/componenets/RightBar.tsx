@@ -4,17 +4,19 @@ import { FaDribbble, FaGithub } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import OpenButton from "./OpenButton";
 import { BiCopy } from "react-icons/bi";
-import { Dispatch, SetStateAction } from "react";
+import MyProjects from "./modalComponenets/MyProjects";
+import { useModal } from "../hooks/useModal";
 
-function RightBar({
-  setOpenModal,
-}: {
-  setOpenModal: Dispatch<SetStateAction<boolean>>;
-}) {
+function RightBar() {
+  const { openModal } = useModal();
+
+  const openProjectsModal = () => {
+    openModal(<MyProjects />);
+  };
   return (
     <div className=" grid grid-cols-1 gap-3">
       <Socials />
-      <Projects setOpenModal={setOpenModal} />
+      <Projects whichModal={openProjectsModal} />
       <div className=" bg-seconday  h-[200px] rounded-3xl p-4 "></div>
       <Email />
     </div>
@@ -45,14 +47,10 @@ const Socials = () => {
     </div>
   );
 };
-const Projects = ({
-  setOpenModal,
-}: {
-  setOpenModal: Dispatch<SetStateAction<boolean>>;
-}) => {
+const Projects = ({ whichModal }: { whichModal: () => void }) => {
   return (
     <div className=" bg-seconday border border-zinc-800 rounded-3xl p-5 relative">
-      <OpenButton setOpenModal={setOpenModal} />
+      <OpenButton whichModal={whichModal} />
       <h1 className="  font-[200] mb-5 text-neutral tracking-widest">
         PROJECTS
       </h1>
