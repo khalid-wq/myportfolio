@@ -27,31 +27,31 @@ function Projects() {
   const { slug } = useParams();
   const project = projectsData.find((project) => project.slug === slug);
 
-  if (!slug) {
-    return <>loading...</>;
-  }
   return (
-    <div className="max-w-6xl mx-auto py-[4rem] p-4">
-      <div className=" flex mb-4 gap-2">
-        <h1 className=" text-2xl font-black ">{project?.title}</h1>
-        <span className=" self-end">(internship)</span>
+    <div className="">
+      <div className="max-w-6xl mx-auto py-[4rem] p-4">
+        {" "}
+        <div className=" flex mb-4 gap-2">
+          <h1 className=" text-2xl font-black ">{project?.title}</h1>
+          <span className=" self-end">(internship)</span>
+        </div>
+        <div className=" flex gap-1 mb-10">
+          {project?.tools.map((tool) => {
+            const icon = icons.find(
+              (image) => image.name.toLowerCase() === tool.toLocaleLowerCase()
+            );
+            return icon ? (
+              <img src={icon.image} width={30} height={30} key={icon.id} />
+            ) : (
+              <span key={tool}>{tool}</span>
+            );
+          })}
+        </div>
+        <div className=" text-neutral">{project?.content}</div>
+        {project && <Images project={project} />}
+        <Buttons />
       </div>
 
-      <div className=" flex gap-1 mb-10">
-        {project?.tools.map((tool) => {
-          const icon = icons.find(
-            (image) => image.name.toLowerCase() === tool.toLocaleLowerCase()
-          );
-          return icon ? (
-            <img src={icon.image} width={30} height={30} key={icon.id} />
-          ) : (
-            <span key={tool}>{tool}</span>
-          );
-        })}
-      </div>
-      <div className=" text-neutral">{project?.content}</div>
-      {project && <Images project={project} />}
-      <Buttons />
       <Footer />
     </div>
   );
@@ -62,7 +62,7 @@ interface ImagesProps {
 
 const Images: React.FC<ImagesProps> = ({ project }) => {
   return (
-    <div className="py-10 flex overflow-x-auto gap-2 no-scrollbar">
+    <div className="py-10 flex overflow-x-auto gap-2 no-scrollbar ">
       {project.image.map((img, index) => (
         <img
           key={index}
@@ -76,10 +76,10 @@ const Images: React.FC<ImagesProps> = ({ project }) => {
 };
 const Buttons = () => {
   return (
-    <div className=" py-[4rem] clear-start flex gap-3 justify-end">
-      <button className="bg-slate-800 p-3 rounded-xl">Live Preview</button>
+    <div className=" py-10 clear-start flex gap-3 justify-end">
+      <button className="bg-slate-800 p-2 rounded-xl">Live Preview</button>
 
-      <button className="bg-slate-800 p-3 rounded-xl">Github Repo</button>
+      <button className="bg-slate-800 p-2 rounded-xl">Github Repo</button>
     </div>
   );
 };
