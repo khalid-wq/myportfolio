@@ -62,7 +62,7 @@ interface ImagesProps {
 
 const Images: React.FC<ImagesProps> = ({ project }) => {
   return (
-    <div className="py-10 flex overflow-x-auto gap-2  ">
+    <div className="py-10 flex overflow-x-auto gap-2 no-scrollbar ">
       {project.image.map((img, index) => (
         <img
           key={index}
