@@ -71,7 +71,3 @@ export const portfoliosData: Data[] = [
     url: "https://portfolio-wq.github.io/ex5-blobs-red/",
   },
 ];
-
-// const projectsData=[
-//     {id:0,title:"",slug:"",url:"",tools:"",image:""}
-// ]

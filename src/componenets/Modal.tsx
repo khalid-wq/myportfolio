@@ -13,6 +13,11 @@ function Modal({ children }: { children: React.ReactNode }) {
       <motion.div
         drag="y"
         dragSnapToOrigin
+        onDragEnd={(event, info) => {
+          if (info.offset.y > 300 || info.offset.y < -300) {
+            closeModal();
+          }
+        }}
         animate={{ scaleY: 1 }}
         initial={{ scaleY: 0 }}
         exit={{ scaleY: 0 }}

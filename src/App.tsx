@@ -7,7 +7,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/myportfolio/" element={<Home />} />
-        <Route path="/myportfolio/projects" element={<Projects />} />
+        <Route path="/myportfolio/projects/:slug" element={<Projects />} />
       </Routes>
     </>
   );

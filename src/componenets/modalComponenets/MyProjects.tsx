@@ -1,5 +1,7 @@
 import { Suspense } from "react";
 import { Data, portfoliosData } from "../../tools/data";
+import { DataProject, projectsData } from "../../tools/projectData";
+import { Link } from "react-router-dom";
 function MyProjects() {
   return (
     <div className="max-w-5xl mx-auto p-4 overflow-y-auto h-full no-scrollbar">
@@ -36,25 +38,6 @@ const Freelancing = () => {
     </div>
   );
 };
-const Others = () => {
-  return (
-    <div>
-      <p>
-        These projects reflect my learning path, starting from HTML and CSS,
-        then moving to JavaScript and then to full-stack development with the
-        MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS). Now, I am focusing on
-        building high-quality, interactive UI/UX components and learning complex
-        animations using Next.js, TailwindCSS with TypeScript, and animation
-        libraries like Framer Motion and GSAP.
-      </p>
-      <div className=" mt-5 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-4 justify-items-center">
-        {portfoliosData.map((portfolio) => (
-          <Card key={portfolio.id} {...portfolio} />
-        ))}
-      </div>
-    </div>
-  );
-};
 const Card = ({ title, url, tools, image }: Data) => {
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800">
@@ -76,6 +59,50 @@ const Card = ({ title, url, tools, image }: Data) => {
           >
             view demo
           </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+const Others = () => {
+  return (
+    <div>
+      <p>
+        These projects reflect my learning path, starting from HTML and CSS,
+        then moving to JavaScript and then to full-stack development with the
+        MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS). Now, I am focusing on
+        building high-quality, interactive UI/UX components and learning complex
+        animations using Next.js, TailwindCSS with TypeScript, and animation
+        libraries like Framer Motion and GSAP.
+      </p>
+      <div className=" mt-5 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-4 justify-items-center">
+        {projectsData.map((project) => (
+          <CardProjects key={project.id} {...project} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const CardProjects = ({ title, image, content, slug }: DataProject) => {
+  return (
+    <div className=" bg-primary rounded-xl p-2 border border-zinc-800">
+      <div className="">
+        <Suspense fallback={<Loading />}>
+          <img src={image[0]} alt={title} className="rounded-xl" />
+        </Suspense>
+      </div>
+      <div className="p-2 flex flex-col">
+        <h2 className=" font-bold">{title}</h2>
+        <span className=" italic">
+          <p className=" text-neutral line-clamp-2  ">{content}</p>
+        </span>
+        <div className=" mt-4 self-end">
+          <Link to={`/myportfolio/projects/${slug}`}>
+            <div className="bg-seconday p-2 rounded-xl border border-zinc-800 ">
+              Read more
+            </div>
+          </Link>
         </div>
       </div>
     </div>
