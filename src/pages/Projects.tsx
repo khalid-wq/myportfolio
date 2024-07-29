@@ -26,7 +26,9 @@ const icons = [
 function Projects() {
   const { slug } = useParams();
   const project = projectsData.find((project) => project.slug === slug);
-
+  if (slug) {
+    document.body.classList.remove("no-scroll");
+  }
   return (
     <div className="">
       <div className="max-w-6xl mx-auto py-[4rem] p-4">

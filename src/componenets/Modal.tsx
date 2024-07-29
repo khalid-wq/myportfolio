@@ -21,7 +21,7 @@ function Modal({ children }: { children: React.ReactNode }) {
         animate={{ scaleY: 1 }}
         initial={{ scaleY: 0 }}
         exit={{ scaleY: 0 }}
-        transition={{ duration: 0.3, type: "spring" }}
+        transition={{ duration: 0.3, ease: "linear" }}
         className="w-full h-[85%] bg-seconday fixed left-0 bottom-0 z-50 rounded-t-3xl origin-bottom overflow-y-auto no-scrollbar "
       >
         <div className="border-b border-zinc-800 flex justify-center items-center sticky top-0 bg-seconday">
