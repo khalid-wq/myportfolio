@@ -25,7 +25,7 @@ const technologies: Tech[] = [
 ];
 function BottomGrid() {
   return (
-    <div className="h-[250px] grid md:grid-cols-2 grid-cols-1 gap-3">
+    <div className=" grid md:grid-cols-2 grid-cols-1 gap-3">
       <Contact />
       <Tech />
     </div>
@@ -33,8 +33,6 @@ function BottomGrid() {
 }
 const Contact = () => {
   const [email, setEmail] = useState("");
-  console.log(email);
-
   return (
     <div className=" bg-seconday border border-zinc-800 rounded-3xl md:p-10 p-5">
       <h2 className=" text-xl mb-10">
@@ -79,7 +77,7 @@ const Tech = () => {
   }, [xTransition, containerWidth]);
 
   return (
-    <div className="relative md:p-10 p-5 bg-seconday border border-zinc-800 rounded-3xl flex flex-col gap-6 justify-between overflow-hidden">
+    <div className="relative  md:p-10 p-5 bg-seconday border border-zinc-800 rounded-3xl flex flex-col gap-6 justify-between overflow-hidden">
       <h1 className="text-xl">Technologies that i use</h1>
       <div
         className="  h-[70px] 

@@ -27,7 +27,7 @@ const MyImage = () => {
 };
 const AboutShort = () => {
   return (
-    <div className=" bg-seconday border border-zinc-800 rounded-3xl p-10 overflow-y-scroll h-[250px] no-scrollbar">
+    <div className=" bg-seconday border border-zinc-800 rounded-3xl md:p-10 p-5 overflow-y-scroll h-[250px] no-scrollbar">
       <h1 className=" text-xl font-[700] mb-3">hello, I'm Khalid Ismail.</h1>
       <p className="text-neutral">
         I am a front-end developer,based in Morocco 🇲🇦, currently I'm a
