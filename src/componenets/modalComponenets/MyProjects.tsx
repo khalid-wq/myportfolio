@@ -1,10 +1,11 @@
-import { Suspense } from "react";
+import { useState } from "react";
 import { Data, portfoliosData } from "../../tools/data";
 import { DataProject, projectsData } from "../../tools/projectData";
 import { Link } from "react-router-dom";
+import Loading from "../Loading";
 function MyProjects() {
   return (
-    <div className="max-w-5xl mx-auto p-4 overflow-y-auto h-full no-scrollbar">
+    <div className="max-w-5xl mx-auto p-4 overflow-y-auto h-full ">
       <h2 className="font-[500] mb-5 text-neutral tracking-widest">
         Freelancing Templates
       </h2>
@@ -39,12 +40,17 @@ const Freelancing = () => {
   );
 };
 const Card = ({ title, url, tools, image }: Data) => {
+  const [loading, setLoading] = useState(false);
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800">
       <div className="">
-        <Suspense fallback={<Loading />}>
-          <img src={image} alt={title} className="rounded-xl" />
-        </Suspense>
+        {!loading && <Loading />}
+        <img
+          src={image}
+          alt={title}
+          className="rounded-xl"
+          onLoad={() => setLoading(true)}
+        />
       </div>
       <div className="p-2">
         <h2 className=" font-bold">{title}</h2>
@@ -85,12 +91,17 @@ const Others = () => {
 };
 
 const CardProjects = ({ title, image, content, slug }: DataProject) => {
+  const [loading, setLoading] = useState(false);
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800">
       <div className="">
-        <Suspense fallback={<Loading />}>
-          <img src={image[0]} alt={title} className="rounded-xl" />
-        </Suspense>
+        {!loading && <Loading />}
+        <img
+          src={image[0]}
+          alt={title}
+          className="rounded-xl"
+          onLoad={() => setLoading(true)}
+        />
       </div>
       <div className="p-2 flex flex-col">
         <h2 className=" font-bold">{title}</h2>
@@ -108,7 +119,5 @@ const CardProjects = ({ title, image, content, slug }: DataProject) => {
     </div>
   );
 };
-function Loading() {
-  return <h2>🌀 Loading...</h2>;
-}
+
 export default MyProjects;

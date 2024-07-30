@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <div className="max-w-5xl mx-auto p-4 overflow-y-auto h-full no-scrollbar pt-10">
+    <div className="max-w-5xl mx-auto p-4 overflow-y-auto h-full ">
       <h2 className="font-[500] mb-5 text-neutral tracking-widest">My Story</h2>
       <p className="font-[400]">
         Born and raised in Morocco, I discovered my passion for web development

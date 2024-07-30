@@ -1,7 +1,29 @@
 import { motion, useDragControls } from "framer-motion";
 import { RiDraggable } from "react-icons/ri";
 import { useModal } from "../hooks/useModal";
-
+const modalVariants = {
+  show: {
+    scaleY: 1,
+    transition: { ease: "easeInOut" },
+  },
+  hide: {
+    scaleY: 0,
+    transition: { ease: "easeInOut", delay: 0.5 },
+  },
+};
+const contentVariants = {
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+    },
+  },
+  hide: {
+    opacity: 0,
+    y: 15,
+  },
+};
 function Modal({ children }: { children: React.ReactNode }) {
   const controls = useDragControls();
   const { closeModal } = useModal();
@@ -19,17 +41,17 @@ function Modal({ children }: { children: React.ReactNode }) {
             closeModal();
           }
         }}
-        animate={{ scaleY: 1 }}
-        initial={{ scaleY: 0 }}
-        exit={{ scaleY: 0 }}
+        variants={modalVariants}
+        animate="show"
+        initial="hide"
+        exit="hide"
         dragConstraints={{ top: 0, bottom: 0 }}
         dragElastic={{ top: 0, bottom: 0.5 }}
         dragListener={false}
         dragControls={controls}
-        transition={{ duration: 0.3, type: "spring" }}
-        className="w-full h-[85%] bg-seconday fixed left-0 bottom-0 z-50 rounded-t-3xl origin-bottom "
+        className="w-full h-[85%] bg-seconday  fixed left-0  bottom-0 z-50 rounded-t-3xl origin-bottom overflow-y-auto no-scrollbar "
       >
-        <div className="border-b border-zinc-800 flex justify-center items-center absolute top-0 left-0 right-0 bg-seconday">
+        <div className="border-b border-zinc-800 flex justify-center items-center sticky top-0 left-0 right-0 bg-seconday">
           <button
             onPointerDown={(e) => {
               controls.start(e);
@@ -40,7 +62,15 @@ function Modal({ children }: { children: React.ReactNode }) {
           </button>
         </div>
         {/* contetnt */}
-        {children}
+        <motion.div
+          variants={contentVariants}
+          animate="show"
+          initial="hide"
+          exit="hide"
+          className=" "
+        >
+          {children}
+        </motion.div>
       </motion.div>
     </div>
   );
