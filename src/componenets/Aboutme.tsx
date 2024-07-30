@@ -13,17 +13,8 @@ function Aboutme() {
 
 const MyImage = () => {
   const [loading, setLoading] = useState(false);
-  console.log(loading);
   return (
-    <div
-      className="  h-[250px] overflow-hidden rounded-3xl flex justify-center items-center"
-      // style={{
-      //   backgroundImage: `url(${myImage})`,
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundPosition: "center",
-      //   backgroundSize: "cover",
-      // }}
-    >
+    <div className="  h-[250px] overflow-hidden rounded-3xl flex justify-center items-center">
       {!loading && <Loading />}
       <img
         src={myImage}

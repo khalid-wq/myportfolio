@@ -12,6 +12,8 @@ function MyProjects() {
         <Freelancing />
       </div>
       <br />
+      <hr className=" rounded " />
+      <br />
       <h2 className="font-[500] mb-5 text-neutral tracking-widest">
         Other Projects
       </h2>
@@ -40,13 +42,15 @@ const Freelancing = () => {
 };
 const Card = ({ title, url, tools, image }: Data) => {
   const [loading, setLoading] = useState(false);
-  if (!loading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800 ">
       <div className="">
+        {!loading && (
+          <div className="  h-[200px] w-[300px]   rounded-3xl bg-seconday border-zinc-800 border flex justify-center items-center">
+            Loading...
+          </div>
+        )}
         <img
           src={image}
           alt={title}
@@ -94,12 +98,15 @@ const Others = () => {
 
 const CardProjects = ({ title, image, content, slug }: DataProject) => {
   const [loading, setLoading] = useState(false);
-  if (!loading) {
-    return <div>Loading...</div>;
-  }
+
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800">
       <div className="">
+        {!loading && (
+          <div className="  h-[200px] w-[300px]   rounded-3xl bg-seconday border-zinc-800 border flex justify-center items-center">
+            Loading...
+          </div>
+        )}
         <img
           src={image[0]}
           alt={title}

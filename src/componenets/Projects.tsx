@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Loading from "./Loading";
 import project1 from "/featu.webp";
 import project2 from "/featured-proj-franz.jpg";
 // import project3 from "/featured-clementine.jpg";
@@ -10,16 +12,17 @@ function Projects() {
   );
 }
 const Project = ({ image }: { image: string }) => {
+  const [loading, setLoading] = useState(false);
   return (
-    <div
-      className="  h-[250px] overflow-hidden rounded-3xl relative"
-      style={{
-        backgroundImage: `url(${image})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-    ></div>
+    <div className="  h-[250px] overflow-hidden rounded-3xl relative">
+      {!loading && <Loading />}
+      <img
+        src={image}
+        alt=""
+        style={{ objectFit: "fill" }}
+        onLoad={() => setLoading(true)}
+      />
+    </div>
   );
 };
 export default Projects;

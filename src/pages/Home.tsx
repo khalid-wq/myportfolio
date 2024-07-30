@@ -14,8 +14,8 @@ function Home() {
     ? document.body.classList.add("no-scroll")
     : document.body.classList.remove("no-scroll");
   return (
-    <div className=" flex flex-col justify-between ">
-      <div className=" p-2 grid lg:grid-cols-[1fr,300px] gap-3 max-w-7xl mx-auto  py-[4rem] ">
+    <div className=" flex flex-col justify-between  items-center ">
+      <div className=" p-2 grid lg:grid-cols-[1fr,300px] gap-3 max-w-7xl  py-[4rem] ">
         <AnimatePresence>
           {isModalOpen && <Modal>{modalContent}</Modal>}
         </AnimatePresence>
