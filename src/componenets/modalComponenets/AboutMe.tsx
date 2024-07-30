@@ -18,8 +18,30 @@ export default function AboutMe() {
         Experience
       </h2>
       <div className="mb-4">
+        <h3 className="font-[500]">Freelancer</h3>
+        <p className="italic text-zinc-500 ">
+          {" "}
+          LinkedIn - TikTok - Re-fragment (currently)
+        </p>
+        <ul className="list-disc pl-5">
+          <li>
+            Founded Re-fragment to help people create interactive UI/UX
+            components by providing both free and paid component code.
+          </li>
+          <li>
+            Creating portfolios and digital content for LinkedIn users to
+            enhance their modern online presence.
+          </li>
+          <li>
+            Developing a wallpaper website for a TikTok content creator and
+            anime MVC editor.
+          </li>
+        </ul>
+      </div>
+
+      <div className="mb-4">
         <h3 className="font-[500]">Web Development Intern</h3>
-        <p className="italic">
+        <p className="italic text-zinc-500">
           METAVERS (Remote) - October to December 2023 (3 months)
         </p>
         <ul className="list-disc pl-5">
@@ -39,7 +61,7 @@ export default function AboutMe() {
       </div>
       <div className="mb-4">
         <h3 className="font-[500]">Virtual Web Development Intern</h3>
-        <p className="italic">
+        <p className="italic text-zinc-500">
           RadicalX (Remote) - November 2022 to February 2023 (4 months)
         </p>
         <ul className="list-disc pl-5">

@@ -1,5 +1,5 @@
 import { animate, motion, useMotionValue } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "/gsap.png";
 import tailwind from "/tailwind.png";
 import react from "/react_logo-512.webp";
@@ -32,9 +32,29 @@ function BottomGrid() {
   );
 }
 const Contact = () => {
+  const [email, setEmail] = useState("false");
+  console.log(email);
+
   return (
     <div className=" bg-seconday border border-zinc-800 rounded-3xl md:p-10 p-5">
-      {/* <h2 className=" text-xl font-">Have a question ?</h2> */}
+      <h2 className=" text-xl mb-10">
+        Be the first to see our newly released components from Re-fragment!
+      </h2>
+      <div className=" flex justify-between gap-3">
+        <input
+          type="text"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          placeholder="Your Email ..."
+          className=" outline-none bg-transparent ring-2 ring-zinc-700 p-3 rounded-2xl grow"
+        />
+        <button
+          onClick={() => setEmail("")}
+          className=" p-3 bg-primary rounded-2xl border-[2px] border-zinc-700"
+        >
+          Subscribe
+        </button>
+      </div>
     </div>
   );
 };

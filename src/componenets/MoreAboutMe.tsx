@@ -14,8 +14,8 @@ export default function MoreAboutMe() {
       <OpenButton whichModal={openAboutMeModal} />
       <h1 className="  font-[200] mb-5 text-neutral tracking-widest">ABOUT</h1>
       <p className="text-white text-xl">
-        Passionate about animating UI components and using CSS and TailwindCSS
-        with Framer-Motion Or GSAP.
+        Passionate about animating UI components using CSS and TailwindCSS with
+        Framer-Motion and GSAP.
       </p>
     </div>
   );
