@@ -32,7 +32,7 @@ function BottomGrid() {
   );
 }
 const Contact = () => {
-  const [email, setEmail] = useState("false");
+  const [email, setEmail] = useState("");
   console.log(email);
 
   return (
