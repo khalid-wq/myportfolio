@@ -1,7 +1,6 @@
 import { AiOutlineDiscord } from "react-icons/ai";
 import { CiFacebook, CiLinkedin } from "react-icons/ci";
-import { FaDribbble, FaGithub } from "react-icons/fa6";
-import { TfiEmail } from "react-icons/tfi";
+import { FaDribbble, FaGithub, FaWhatsapp } from "react-icons/fa6";
 import OpenButton from "./OpenButton";
 import { BiCopy } from "react-icons/bi";
 import MyProjects from "./modalComponenets/MyProjects";
@@ -30,25 +29,13 @@ function RightBar() {
 const Socials = () => {
   return (
     <div className=" grid grid-cols-3 gap-3">
-      <div className="bg-seconday p-4 rounded-3xl border border-zinc-800 flex justify-center items-center cursor-pointer">
-        <CiLinkedin size={30} />
-      </div>
-
-      <div className="bg-seconday p-4 rounded-3xl border border-zinc-800 flex justify-center items-center cursor-pointer">
-        <CiFacebook size={30} />
-      </div>
-      <div className="bg-seconday p-4 rounded-3xl border border-zinc-800 flex justify-center items-center cursor-pointer ">
-        <FaGithub size={30} />
-      </div>
-      <div className="bg-seconday p-4 rounded-3xl border border-zinc-800 flex justify-center items-center cursor-pointer">
-        <AiOutlineDiscord size={30} />
-      </div>
-      <div className="bg-seconday p-4 rounded-3xl border border-zinc-800 flex justify-center items-center cursor-pointer">
-        <FaDribbble size={30} />
-      </div>
-      <div className="bg-seconday p-4 rounded-3xl border border-zinc-800 flex justify-center items-center cursor-pointer">
-        <TfiEmail size={30} />
-      </div>
+      {socials.map((s) => (
+        <a key={s.name} href={s.link} target="_blank">
+          <div className="bg-seconday p-4 rounded-3xl border border-zinc-800 flex justify-center items-center cursor-pointer">
+            <s.Icon size={30} />
+          </div>
+        </a>
+      ))}
     </div>
   );
 };
@@ -101,3 +88,28 @@ const Portfolios = ({ whichModal }: { whichModal: () => void }) => {
   );
 };
 export default RightBar;
+
+const socials = [
+  {
+    name: "linkedIn",
+    Icon: CiLinkedin,
+    link: "https://www.linkedin.com/in/khalid-ismail-62185b239/",
+  },
+  {
+    name: "Facebook",
+    Icon: CiFacebook,
+    link: "https://www.facebook.com/99.khaledB/",
+  },
+  { name: "Github", Icon: FaGithub, link: "https://github.com/khalid-wq" },
+  {
+    name: "Discord",
+    Icon: AiOutlineDiscord,
+    link: "https://discord.com/users/762076845721649162",
+  },
+  { name: "Dribbble", Icon: FaDribbble, link: "https://dribbble.com/fffwd" },
+  {
+    name: "whatsapp",
+    Icon: FaWhatsapp,
+    link: "https://api.whatsapp.com/send?phone=212642945818",
+  },
+];

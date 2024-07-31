@@ -23,6 +23,7 @@ export interface DataProject {
   url: string;
   slug: string;
   github: string;
+  tiktok: string;
   content: string[];
 }
 export const projectsData: DataProject[] = [
@@ -57,6 +58,7 @@ export const projectsData: DataProject[] = [
     ],
     url: "undefined",
     github: "undefined",
+    tiktok: "undefined",
   },
   {
     id: 1,
@@ -74,12 +76,13 @@ export const projectsData: DataProject[] = [
       `With this project, I learned Tailwind CSS and CSS Grid. It helped me deepen my understanding of how Tailwind CSS works, providing
        rich content to experiment with using the RAWG API (https://api.rawg.io/docs/), and how to fetch data from it .`,
     ],
-    github: "undefined",
-    url: "https://portfolio-wq.github.io/pink-1/",
+    github: "https://github.com/khalid-wq/rawg",
+    url: "undefined",
+    tiktok: "undefined",
   },
   {
     id: 2,
-    status: "Completed",
+    status: "Completed-out-of-service",
     title: "Wallpapers Anime Gallary",
     slug: "Wallpapers-Anime-Gallary",
     image: [wallpaper1, wallpaper2, wallpaper3],
@@ -91,12 +94,14 @@ export const projectsData: DataProject[] = [
       `For this application, I used Next.js as a front-end framework along with CSS and Material-UI, and Node.js for the backend with MongoDB
        and Express.js. AWS S3 was utilized for image storage, and JSON Web Tokens (JWT) were used for authentication. The application features a
         simple dashboard where the client can add wallpapers by posting images to AWS S3, retrieving the S3 URL, and editing, removing, or updating wallpapers."
+        tiktok: "undefined",
       `,
       `The website reached up to 1,000+ users per week, but unfortunately, due to the high-quality images, the AWS bill became too expensive for
        the client to pay. As a result, the website is now out of service. `,
     ],
     github: "undefined",
-    url: "https://portfolio-wq.github.io/pink-1/",
+    url: "https://www.turanks.com/",
+    tiktok: "https://www.tiktok.com/@turanks_",
   },
   {
     id: 3,
@@ -112,6 +117,7 @@ export const projectsData: DataProject[] = [
     ],
     github: "undefined",
     url: "https://portfolio-wq.github.io/pink-1/",
+    tiktok: "undefined",
   },
   {
     id: 4,
@@ -130,6 +136,7 @@ export const projectsData: DataProject[] = [
     ],
     github: "undefined",
     url: "https://portfolio-wq.github.io/pink-1/",
+    tiktok: "undefined",
   },
   {
     id: 5,
@@ -138,11 +145,13 @@ export const projectsData: DataProject[] = [
     slug: "Youtube-clone",
     image: [youtube],
     tools: ["reactjs", "css", "api"],
-    github: "undefined",
+
     content: [
       "YouTube clone application using React JS and Material UI 5, Integrating the application with Rapid API to retrieve video data.",
     ],
+    github: "https://github.com/khalid-wq/youtube-clone",
     url: "https://portfolio-wq.github.io/pink-1/",
+    tiktok: "undefined",
   },
   {
     id: 6,
@@ -155,7 +164,8 @@ export const projectsData: DataProject[] = [
       "Full product management system crud with javascript,to Create data, Read and display that data, Data modification and updating, delete data and Find data.",
     ],
     github: "undefined",
-    url: "https://portfolio-wq.github.io/pink-1/",
+    url: "undefined",
+    tiktok: "undefined",
   },
   {
     id: 7,
@@ -168,7 +178,8 @@ export const projectsData: DataProject[] = [
       " A sample portfolio using HTML and more advanced CSS to make it dynamique.",
     ],
     github: "undefined",
-    url: "https://portfolio-wq.github.io/pink-1/",
+    url: "undefined",
+    tiktok: "undefined",
   },
   {
     id: 8,
@@ -176,7 +187,13 @@ export const projectsData: DataProject[] = [
     title: "Re-fragment",
     slug: "re-fragment",
     image: [ref1, ref2],
-    tools: [],
+    tools: [
+      "nextjs",
+      "tailwindcss",
+      "framer-motion",
+      "next-auth",
+      "typescript",
+    ],
     content: [
       `Re-fragement is a platform that provides a collection of prebuilt UI components and templates, designed to streamline the development
        of websites and applications. These resources are specifically tailored for use with React, TailwindCSS, and often integrate
@@ -191,6 +208,7 @@ export const projectsData: DataProject[] = [
         both aesthetic appeal and functional design. This makes it easier to launch projects with a consistent and modern look`,
     ],
     url: "https://re-fragment.vercel.app/",
+    tiktok: "undefined",
     github: "undefined",
   },
 ];

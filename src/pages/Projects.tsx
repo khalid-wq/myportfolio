@@ -134,13 +134,24 @@ const Buttons: React.FC<ImagesProps> = ({ project }) => {
   return (
     <div className=" py-10 clear-start flex gap-3 justify-end">
       {project.url !== "undefined" && (
-        <button className="bg-slate-800 p-2 rounded-xl">
-          <a href={project.url}>Check website</a>{" "}
+        <button className="bg-slate-800 p-2 rounded-xl border border-zinc-600">
+          <a href={project.url.trim()} target="_blank">
+            Website live
+          </a>{" "}
         </button>
       )}
       {project.github !== "undefined" && (
-        <button className="bg-slate-800 p-2 rounded-xl">
-          <a href={project.github}>Github Repo</a>{" "}
+        <button className="bg-slate-800 p-2 rounded-xl border border-zinc-600">
+          <a href={project.github.trim()} target="_blank">
+            Github Repo
+          </a>{" "}
+        </button>
+      )}
+      {project.tiktok !== "undefined" && (
+        <button className="bg-slate-800 p-2 rounded-xl border border-zinc-600">
+          <a href={project.url.trim()} target="_blank">
+            Tiktok account
+          </a>{" "}
         </button>
       )}
     </div>
