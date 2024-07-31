@@ -25,7 +25,7 @@ const Others = () => {
         libraries like Framer Motion and GSAP.
       </p>
       <div className=" mt-5 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-4 justify-items-center">
-        {projectsData.map((project) => (
+        {projectsData.slice(0, 8).map((project) => (
           <CardProjects key={project.id} {...project} />
         ))}
       </div>
@@ -33,7 +33,7 @@ const Others = () => {
   );
 };
 
-const CardProjects = ({ title, image, content, slug }: DataProject) => {
+export const CardProjects = ({ title, image, content, slug }: DataProject) => {
   const [loading, setLoading] = useState(false);
 
   return (

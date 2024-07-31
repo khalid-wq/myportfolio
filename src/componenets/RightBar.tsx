@@ -7,6 +7,7 @@ import { BiCopy } from "react-icons/bi";
 import MyProjects from "./modalComponenets/MyProjects";
 import { useModal } from "../hooks/useModal";
 import MyPortfolios from "./modalComponenets/MyPortfolios";
+import toast from "react-hot-toast";
 
 function RightBar() {
   const { openModal } = useModal();
@@ -66,10 +67,20 @@ const Projects = ({ whichModal }: { whichModal: () => void }) => {
   );
 };
 const Email = () => {
+  const handleEmilCopied = () => {
+    const email = "khalidsmail50@gmail.com";
+    navigator.clipboard
+      .writeText(email)
+      .then(() => toast.success("email copied"))
+      .catch(() => toast.error("somthing went wroon"));
+  };
   return (
     <div className=" bg-seconday border border-zinc-800 rounded-3xl p-5 relative flex justify-center items-center flex-col">
       <p className="text-white text-xl mb-4 ">have a project in Minde?</p>
-      <button className=" bg-zinc-800 flex justify-center items-center p-3 rounded-xl gap-3">
+      <button
+        onClick={() => handleEmilCopied()}
+        className=" bg-zinc-800 flex justify-center items-center p-3 rounded-xl gap-3"
+      >
         copie email <BiCopy />
       </button>
     </div>

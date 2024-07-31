@@ -71,7 +71,6 @@ function Projects() {
   return (
     <div className="">
       <div className="max-w-6xl mx-auto py-[4rem] p-4">
-        {" "}
         <div className=" flex mb-4 gap-2">
           <h1 className=" text-2xl font-black ">{project?.title}</h1>
           <span className=" self-end">({project?.status})</span>
@@ -111,9 +110,17 @@ interface ImagesProps {
 
 const Images: React.FC<ImagesProps> = ({ project }) => {
   return (
-    <div className="py-10 flex overflow-x-auto gap-2 no-scrollbar ">
+    <div
+      className="py-10 flex overflow-x-auto gap-2 no-scrollbar scroll-smooth "
+      style={{
+        scrollSnapType: "x mandatory",
+      }}
+    >
       {project.image.map((img, index) => (
         <img
+          style={{
+            scrollSnapAlign: "center",
+          }}
           key={index}
           src={img}
           alt={project.title}
@@ -128,7 +135,7 @@ const Buttons: React.FC<ImagesProps> = ({ project }) => {
     <div className=" py-10 clear-start flex gap-3 justify-end">
       {project.url !== "undefined" && (
         <button className="bg-slate-800 p-2 rounded-xl">
-          <a href={project.url}>Live Preview</a>{" "}
+          <a href={project.url}>Check website</a>{" "}
         </button>
       )}
       {project.github !== "undefined" && (

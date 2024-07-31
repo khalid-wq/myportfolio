@@ -16,6 +16,7 @@ const MyImage = () => {
   return (
     <div className="  h-[250px] overflow-hidden rounded-3xl flex justify-center items-center">
       {!loading && <Loading />}
+
       <img
         src={myImage}
         alt=""

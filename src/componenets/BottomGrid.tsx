@@ -10,6 +10,7 @@ import docker from "/docker.png";
 import nodejs from "/nodejs.png";
 import javascript from "/JavaScript-logo.png";
 import typescript from "/Typescript_logo_2020.svg.png";
+import toast from "react-hot-toast";
 
 const technologies: Tech[] = [
   { id: 0, name: "ReactJS", image: react },
@@ -33,6 +34,25 @@ function BottomGrid() {
 }
 const Contact = () => {
   const [email, setEmail] = useState("");
+  const handleEmailSubmit = () => {
+    if (!email.trim()) {
+      return toast("Pleas enter your email first!", {
+        icon: "👏",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    }
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const chekedEmail = regex.test(email.trim());
+
+    if (!chekedEmail) {
+      return toast.error("You entered an incorrect email!!");
+    }
+    return toast.success("Thank you for joining in!");
+  };
   return (
     <div className=" bg-seconday border border-zinc-800 rounded-3xl md:p-10 p-5">
       <h2 className=" text-xl mb-10">
@@ -47,7 +67,7 @@ const Contact = () => {
           className=" outline-none bg-transparent ring-2 ring-zinc-700 p-3 rounded-2xl grow"
         />
         <button
-          onClick={() => setEmail("")}
+          onClick={() => handleEmailSubmit()}
           className=" p-3 bg-primary rounded-2xl border-[2px] border-zinc-700"
         >
           Subscribe
@@ -85,7 +105,6 @@ const Tech = () => {
         after:absolute after:right-0 after:content-[''] after:h-full after:w-[50px] after:bg-gradient-to-l after:from-seconday after:to-transparent after:z-10 
 "
       >
-        {" "}
         <motion.div
           ref={containerRef}
           style={{ x: xTransition }}

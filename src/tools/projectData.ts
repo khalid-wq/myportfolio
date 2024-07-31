@@ -12,6 +12,8 @@ import workshop4 from "../../public/projects/workshop4.png";
 import youtube from "../../public/projects/youtube.png";
 import crud from "../../public/projects/crud.png";
 import simple from "../../public/projects/simple.png";
+import ref1 from "../../public/projects/1.png";
+import ref2 from "../../public/projects/2.png";
 export interface DataProject {
   id: number;
   title: string;
@@ -167,5 +169,28 @@ export const projectsData: DataProject[] = [
     ],
     github: "undefined",
     url: "https://portfolio-wq.github.io/pink-1/",
+  },
+  {
+    id: 8,
+    status: "In-Progress",
+    title: "Re-fragment",
+    slug: "re-fragment",
+    image: [ref1, ref2],
+    tools: [],
+    content: [
+      `Re-fragement is a platform that provides a collection of prebuilt UI components and templates, designed to streamline the development
+       of websites and applications. These resources are specifically tailored for use with React, TailwindCSS, and often integrate
+        with animation libraries like Framer Motion
+        `,
+      `The components available on Re-fragement cover a wide range of UI needs, including navigation bars, buttons, carousels, dropdown menus,
+       modals, and more. They are designed to enhance the visual appeal and interactivity of web projects, making it easy to implement polished,
+        professional-looking features without having to build them from scratch.
+        `,
+      `For developers looking to expedite their development process, Re-fragement  also offers a selection of complete templates. These templates,
+       which include styles like Clean Neubrutalism and Steam Dev Portfolio, are built on top of Next.js and styled with TailwindCSS, offering
+        both aesthetic appeal and functional design. This makes it easier to launch projects with a consistent and modern look`,
+    ],
+    url: "https://re-fragment.vercel.app/",
+    github: "undefined",
   },
 ];

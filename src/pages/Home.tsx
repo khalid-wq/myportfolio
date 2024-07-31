@@ -7,6 +7,7 @@ import RightBar from "../componenets/RightBar";
 import { AnimatePresence } from "framer-motion";
 import { useModal } from "../hooks/useModal";
 import Footer from "../componenets/Footer";
+import { Toaster } from "react-hot-toast";
 
 function Home() {
   const { isModalOpen, modalContent } = useModal();
@@ -15,6 +16,7 @@ function Home() {
     : document.body.classList.remove("no-scroll");
   return (
     <div className=" flex flex-col justify-center  items-center lg:h-screen ">
+      <Toaster position="top-center" reverseOrder={false} />
       <div className=" p-2 grid lg:grid-cols-[1fr,300px] gap-3 max-w-7xl  py-[4rem] ">
         <AnimatePresence>
           {isModalOpen && <Modal>{modalContent}</Modal>}
