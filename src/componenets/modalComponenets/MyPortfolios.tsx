@@ -16,7 +16,7 @@ function MyPortfolios() {
 }
 const Freelancing = () => {
   return (
-    <div className=" pb-[100px]">
+    <div className=" ">
       <p>
         Here, you can choose any template as an example for your project. If you
         have any other idea or design, we can work on it together. You can also

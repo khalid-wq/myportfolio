@@ -49,7 +49,7 @@ function Modal({ children }: { children: React.ReactNode }) {
         dragElastic={{ top: 0, bottom: 0.5 }}
         dragListener={false}
         dragControls={controls}
-        className="w-full h-[85%] bg-seconday  fixed left-0  bottom-0 z-50 rounded-t-3xl origin-bottom overflow-y-auto no-scrollbar "
+        className="w-full h-[85%] bg-seconday  fixed left-0  bottom-0 z-50 rounded-t-3xl origin-bottom "
       >
         <div className="border-b border-zinc-800 flex justify-center items-center sticky top-0 left-0 right-0 bg-seconday">
           <button
@@ -67,7 +67,7 @@ function Modal({ children }: { children: React.ReactNode }) {
           animate="show"
           initial="hide"
           exit="hide"
-          className=" "
+          className=" overflow-y-auto h-full pb-[50px]"
         >
           {children}
         </motion.div>

@@ -106,10 +106,14 @@ const socials = [
     Icon: AiOutlineDiscord,
     link: "https://discord.com/users/762076845721649162",
   },
-  { name: "Dribbble", Icon: FaDribbble, link: "https://dribbble.com/fffwd" },
+  {
+    name: "Dribbble",
+    Icon: FaDribbble,
+    link: "https://dribbble.com/khalid-Ismail",
+  },
   {
     name: "whatsapp",
     Icon: FaWhatsapp,
-    link: "https://api.whatsapp.com/send?phone=212642945818",
+    link: "https://api.whatsapp.com/send?phone=212642948518",
   },
 ];
