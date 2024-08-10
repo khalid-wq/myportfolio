@@ -8,9 +8,9 @@ export default function AboutMe() {
         junior front-end developer, I am honing my skills in HTML, CSS,
         JavaScript, and React to build engaging and interactive user interfaces.
         Currently freelancing, I founded "Re-fragment" to showcase my dedication
-        to blending creativity with cutting-edge technology. My journey from
-        Morocco into the world of web development reflects my commitment to
-        constantly improving and innovating in design and animation.
+        to blending creativity with cutting-edge technology. My journey into the
+        world of web development reflects my commitment to constantly improving
+        and innovating in design and animation.
       </p>
       <br />
 

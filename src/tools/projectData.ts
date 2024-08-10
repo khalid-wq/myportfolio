@@ -94,7 +94,7 @@ export const projectsData: DataProject[] = [
       `For this application, I used Next.js as a front-end framework along with CSS and Material-UI, and Node.js for the backend with MongoDB
        and Express.js. AWS S3 was utilized for image storage, and JSON Web Tokens (JWT) were used for authentication. The application features a
         simple dashboard where the client can add wallpapers by posting images to AWS S3, retrieving the S3 URL, and editing, removing, or updating wallpapers."
-        tiktok: "undefined",
+       ,
       `,
       `The website reached up to 1,000+ users per week, but unfortunately, due to the high-quality images, the AWS bill became too expensive for
        the client to pay. As a result, the website is now out of service. `,
@@ -116,7 +116,7 @@ export const projectsData: DataProject[] = [
       `I used ReactJS and TailwindCSS to build this project, which helps my team find and reuse our YAML codes.`,
     ],
     github: "undefined",
-    url: "https://portfolio-wq.github.io/pink-1/",
+    url: "undefined",
     tiktok: "undefined",
   },
   {
@@ -135,7 +135,7 @@ export const projectsData: DataProject[] = [
       `,
     ],
     github: "undefined",
-    url: "https://portfolio-wq.github.io/pink-1/",
+    url: "undefined",
     tiktok: "undefined",
   },
   {
@@ -150,7 +150,7 @@ export const projectsData: DataProject[] = [
       "YouTube clone application using React JS and Material UI 5, Integrating the application with Rapid API to retrieve video data.",
     ],
     github: "https://github.com/khalid-wq/youtube-clone",
-    url: "https://portfolio-wq.github.io/pink-1/",
+    url: "https://github.com/khalid-wq/youtube-clone",
     tiktok: "undefined",
   },
   {

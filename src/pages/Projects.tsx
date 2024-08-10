@@ -149,7 +149,7 @@ const Buttons: React.FC<ImagesProps> = ({ project }) => {
       )}
       {project.tiktok !== "undefined" && (
         <button className="bg-slate-800 p-2 rounded-xl border border-zinc-600">
-          <a href={project.url.trim()} target="_blank">
+          <a href={project.tiktok.trim()} target="_blank">
             Tiktok account
           </a>{" "}
         </button>
