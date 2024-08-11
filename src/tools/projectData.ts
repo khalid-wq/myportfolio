@@ -207,7 +207,7 @@ export const projectsData: DataProject[] = [
        which include styles like Clean Neubrutalism and Steam Dev Portfolio, are built on top of Next.js and styled with TailwindCSS, offering
         both aesthetic appeal and functional design. This makes it easier to launch projects with a consistent and modern look`,
     ],
-    url: "https://re-fragment.vercel.app/",
+    url: "https://re-fragment.com",
     tiktok: "undefined",
     github: "undefined",
   },
