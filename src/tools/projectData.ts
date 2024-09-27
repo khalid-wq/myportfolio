@@ -100,7 +100,7 @@ export const projectsData: DataProject[] = [
        the client to pay. As a result, the website is now out of service. `,
     ],
     github: "undefined",
-    url: "https://www.turanks.com/",
+    url: "https://turanks2.vercel.app/",
     tiktok: "https://www.tiktok.com/@turanks_",
   },
   {
