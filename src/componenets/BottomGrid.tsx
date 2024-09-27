@@ -1,5 +1,5 @@
 import { animate, motion, useMotionValue } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "/gsap.png";
 import tailwind from "/tailwind.png";
 import react from "/react_logo-512.webp";
@@ -77,12 +77,12 @@ const Contact = () => {
   );
 };
 const Tech = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
   const xTransition = useMotionValue(0);
-  const containerWidth = containerRef?.current?.getBoundingClientRect().width;
-  useEffect(() => {
-    if (!containerWidth) return;
 
+  useEffect(() => {
+    const containerElement = document.getElementById("container-section");
+    const containerWidth = containerElement?.clientWidth;
+    if (!containerWidth) return;
     const finalPosition = -containerWidth / 2 - 8;
 
     const controls = animate(xTransition, [0, finalPosition], {
@@ -94,7 +94,7 @@ const Tech = () => {
     });
 
     return controls.stop;
-  }, [xTransition, containerWidth]);
+  }, [xTransition]);
 
   return (
     <div className="relative  md:p-10 p-5 bg-seconday border border-zinc-800 rounded-3xl flex flex-col gap-6 justify-between overflow-hidden">
@@ -106,7 +106,7 @@ const Tech = () => {
 "
       >
         <motion.div
-          ref={containerRef}
+          id="container-section"
           style={{ x: xTransition }}
           className="  h-[70px]  flex gap-2 absolute   
         "
