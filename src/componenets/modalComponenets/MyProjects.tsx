@@ -34,21 +34,15 @@ const Others = () => {
 };
 
 export const CardProjects = ({ title, image, content, slug }: DataProject) => {
-  const [loading, setLoading] = useState(false);
 
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800">
       <div className="">
-        {!loading && (
-          <div className="  h-[200px] w-[300px]   rounded-3xl bg-seconday border-zinc-800 border flex justify-center items-center">
-            Loading...
-          </div>
-        )}
+       
         <img
           src={image[0]}
           alt={title}
           className="rounded-xl"
-          onLoad={() => setLoading(true)}
         />
       </div>
       <div className="p-2 flex flex-col">
