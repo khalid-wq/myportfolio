@@ -1,6 +1,5 @@
 import { useState } from "react";
 import myImage from "/myImage.jpg";
-import Loading from "./Loading";
 
 function Aboutme() {
   return (
@@ -12,16 +11,13 @@ function Aboutme() {
 }
 
 const MyImage = () => {
-  const [loading, setLoading] = useState(false);
   return (
     <div className="  h-[250px] overflow-hidden rounded-3xl flex justify-center items-center">
-      {!loading && <Loading />}
 
       <img
         src={myImage}
         alt=""
         style={{ objectFit: "cover" }}
-        onLoad={() => setLoading(true)}
       />
     </div>
   );
