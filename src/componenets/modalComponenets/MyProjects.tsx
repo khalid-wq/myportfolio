@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { DataProject, projectsData } from "../../tools/projectData";
 import { Link } from "react-router-dom";
 function MyProjects() {
@@ -34,16 +33,10 @@ const Others = () => {
 };
 
 export const CardProjects = ({ title, image, content, slug }: DataProject) => {
-
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800">
       <div className="">
-       
-        <img
-          src={image[0]}
-          alt={title}
-          className="rounded-xl"
-        />
+        <img src={image[0]} alt={title} className="rounded-xl" />
       </div>
       <div className="p-2 flex flex-col">
         <h2 className=" font-bold">{title}</h2>

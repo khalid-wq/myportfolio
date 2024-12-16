@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Data, portfoliosData } from "../../tools/data";
 
 function MyPortfolios() {
@@ -31,16 +30,10 @@ const Freelancing = () => {
   );
 };
 const Card = ({ title, url, tools, image }: Data) => {
-
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800 ">
       <div className="">
-      
-        <img
-          src={image}
-          alt={title}
-          className="rounded-xl"
-        />
+        <img src={image} alt={title} className="rounded-xl" />
       </div>
       <div className="p-2">
         <h2 className=" font-bold">{title}</h2>

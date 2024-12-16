@@ -1,4 +1,3 @@
-import { useState } from "react";
 import myImage from "/myImage.jpg";
 
 function Aboutme() {
@@ -13,12 +12,7 @@ function Aboutme() {
 const MyImage = () => {
   return (
     <div className="  h-[250px] overflow-hidden rounded-3xl flex justify-center items-center">
-
-      <img
-        src={myImage}
-        alt=""
-        style={{ objectFit: "cover" }}
-      />
+      <img src={myImage} alt="" style={{ objectFit: "cover" }} />
     </div>
   );
 };
