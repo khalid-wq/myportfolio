@@ -31,21 +31,15 @@ const Freelancing = () => {
   );
 };
 const Card = ({ title, url, tools, image }: Data) => {
-  const [loading, setLoading] = useState(false);
 
   return (
     <div className=" bg-primary rounded-xl p-2 border border-zinc-800 ">
       <div className="">
-        {!loading && (
-          <div className="  h-[200px] w-[300px]   rounded-3xl bg-seconday border-zinc-800 border flex justify-center items-center">
-            Loading...
-          </div>
-        )}
+      
         <img
           src={image}
           alt={title}
           className="rounded-xl"
-          onLoad={() => setLoading(true)}
         />
       </div>
       <div className="p-2">
