@@ -21,7 +21,7 @@ const AboutShort = () => {
     <div className=" bg-seconday border border-zinc-800 rounded-3xl md:p-10 p-5 overflow-y-scroll h-[250px] no-scrollbar">
       <h1 className=" text-xl font-[700] mb-3">hello, I'm Khalid Ismail.</h1>
       <p className="text-neutral">
-        I am a front-end developer,based in Morocco 🇲🇦, currently I'm a
+        I am a full-stack developer,based in Morocco 🇲🇦, currently I'm a
         freelancer passionate about animating and making interactive UI
         components , founder of&nbsp;
         <a href="#" className="underline">
