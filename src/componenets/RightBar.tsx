@@ -18,7 +18,7 @@ function RightBar() {
     openModal(<MyPortfolios />);
   };
   return (
-    <div className=" grid grid-cols-1 gap-3">
+    <div className=" grid grid-cols-1 gap-3 h-full">
       <Socials />
       <Projects whichModal={openPortfoliosModal} />
       <Portfolios whichModal={openProjectsModal} />
