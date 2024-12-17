@@ -24,7 +24,7 @@ const AboutShort = () => {
         I am a full-stack developer,based in Morocco 🇲🇦, currently I'm a
         freelancer passionate about animating and making interactive UI
         components , founder of&nbsp;
-        <a href="re-fragment.com" className="underline">
+        <a href="https://re-fragment.com" target="_blank" className="underline">
           Re-fragment
         </a>
       </p>
