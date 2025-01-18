@@ -24,8 +24,8 @@ const Others = () => {
         libraries like Framer Motion and GSAP.
       </p>
       <div className=" mt-5 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-4 justify-items-center">
-        {projectsData.slice(0, 8).map((project) => (
-          <CardProjects key={project.id} {...project} />
+        {projectsData.slice(0, 8).map((project, i) => (
+          <CardProjects key={i} {...project} />
         ))}
       </div>
     </div>
