@@ -18,10 +18,34 @@ export default function AboutMe() {
         Experience
       </h2>
       <div className="mb-4">
+        <h3 className="font-[500]">
+          Full-stack & DevOps Engineer (Internship){" "}
+        </h3>
+        <p className="italic text-zinc-500 ">
+          Valhko (Remote) - November 2024 to January 2025 (3 months)
+        </p>
+        <ul className="list-disc pl-5">
+          <li>
+            Designed and implemented user interfaces for AI model interaction
+            using Next.js.
+          </li>
+          <li>
+            Developed backend infrastructure and core platform features using
+            Django, including REST API integration.
+          </li>
+          <li>Managed and monitored server infrastructure on Azure.</li>
+          <li>
+            Collaborated with the AI research team and DevOps engineers to
+            streamline workflows and deployment pipelines.
+          </li>
+        </ul>
+      </div>
+      {/* frelancing */}
+      <div className="mb-4">
         <h3 className="font-[500]">Freelancer</h3>
         <p className="italic text-zinc-500 ">
           {" "}
-          LinkedIn - TikTok - Re-fragment (currently)
+          LinkedIn - TikTok - Re-fragment (Started February 2024)
         </p>
         <ul className="list-disc pl-5">
           <li>
