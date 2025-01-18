@@ -14,8 +14,12 @@ import crud from "../../public/projects/crud.png";
 import simple from "../../public/projects/simple.png";
 import ref1 from "../../public/projects/1.png";
 import ref2 from "../../public/projects/2.png";
+import aryahome from "../../public/projects/arya/home.png";
+import aryalogin from "../../public/projects/arya/login.png";
+import aryaprofile from "../../public/projects/arya/profile.png";
+import aryaui1 from "../../public/projects/arya/chatui.png";
+import aryauui2 from "../../public/projects/arya/chatui2.png";
 export interface DataProject {
-  id: number;
   title: string;
   status: string;
   image: string[];
@@ -28,9 +32,39 @@ export interface DataProject {
 }
 export const projectsData: DataProject[] = [
   {
-    id: 0,
+    status: "Internship",
+    title: "Valhko-Arya Ai Advisore",
+    slug: "Valhko-Arya-Ai-advisore",
+    image: [aryahome, aryalogin, aryaui1, aryauui2, aryaprofile],
+    tools: [
+      "nextjs",
+      "Azure",
+      "docker",
+      "django",
+      "postgres",
+      "tailwindcss",
+      "typescript",
+    ],
+    content: [
+      `Arya is a sub-application within the MAPU platform, designed to provide personalized career insights and skill analysis.
+       Using AI and Machine Learning, Arya processes user data, such as resumes,
+      to deliver actionable career recommendations. The app features a user-friendly dashboard 
+      for individuals to interact with the AI agent and an admin dashboard for managing the platform.
+        `,
+      `As the sole frontend developer, I am responsible for creating the entire user interface, ensuring responsiveness and seamless user experiences.
+       On the backend, I have implemented authentication logic to secure data and user interactions. Additionally, I contribute to DevOps and deployment,
+        leveraging Azure to ensure the platform’s scalability, security, and availability. Collaboration with the AI/ML team ensures smooth integration of algorithms and features.
+        `,
+      `Built with Next.js for the frontend, Django for the backend, and PostgreSQL for database management, Arya is designed for efficiency and scalability. This project has provided 
+      me with valuable experience in full-stack development, DevOps, and working in a multidisciplinary team to solve real-world career development challenges.`,
+    ],
+    url: "https://mapu.solutions/arya",
+    github: "undefined",
+    tiktok: "undefined",
+  },
+  {
     status: "In-Progress",
-    title: "University Tickiting system",
+    title: "University Tickiting System",
     slug: "University-Tickiting-system",
     image: [tickiting1, tickiting2],
     tools: [
@@ -61,7 +95,6 @@ export const projectsData: DataProject[] = [
     tiktok: "undefined",
   },
   {
-    id: 1,
     status: "Completed",
     title: "RAWG platform clone",
     slug: "RAWG-platform-clone",
@@ -81,7 +114,6 @@ export const projectsData: DataProject[] = [
     tiktok: "undefined",
   },
   {
-    id: 2,
     status: "Completed-out-of-service",
     title: "Wallpapers Anime Gallary",
     slug: "Wallpapers-Anime-Gallary",
@@ -104,7 +136,6 @@ export const projectsData: DataProject[] = [
     tiktok: "https://www.tiktok.com/@turanks_",
   },
   {
-    id: 3,
     status: "Completed-internship",
     title: "Yaml editor with AWS S3",
     slug: "Yaml-editor-with-AWS-S3",
@@ -120,7 +151,6 @@ export const projectsData: DataProject[] = [
     tiktok: "undefined",
   },
   {
-    id: 4,
     status: "Completed-internship",
     title: "Internship workshop",
     slug: "Internship-workshop",
@@ -139,7 +169,6 @@ export const projectsData: DataProject[] = [
     tiktok: "undefined",
   },
   {
-    id: 5,
     status: "Completed",
     title: "Youtube clone",
     slug: "Youtube-clone",
@@ -154,7 +183,6 @@ export const projectsData: DataProject[] = [
     tiktok: "undefined",
   },
   {
-    id: 6,
     status: "Completed",
     title: "CRUD system with javascript",
     slug: "CRUD-system-with-javascript",
@@ -168,7 +196,6 @@ export const projectsData: DataProject[] = [
     tiktok: "undefined",
   },
   {
-    id: 7,
     status: "Completed",
     title: "HTML & CSS Landing Page",
     slug: "HTML&CSS-Landing-Page",
@@ -182,7 +209,6 @@ export const projectsData: DataProject[] = [
     tiktok: "undefined",
   },
   {
-    id: 8,
     status: "In-Progress",
     title: "Re-fragment",
     slug: "re-fragment",
