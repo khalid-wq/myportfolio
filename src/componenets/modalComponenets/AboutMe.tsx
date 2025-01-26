@@ -122,7 +122,7 @@ const AboutMe = () => {
       school: "ISTA NTIC Beni Mellal",
       degree:
         "Diploma of Specialized Technician: In Computer Network Techniques",
-      period: "Year not specified",
+      period: " ",
     },
   ];
 
